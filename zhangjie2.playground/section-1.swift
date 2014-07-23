@@ -32,7 +32,7 @@ for x = 0;x < 4;x++ {
     }
     index--
     i = x
-    for j = 6-x;j >= x ;j-- {
+    for j = 6-x;j > x ;j-- {
     index++
         array[i][j] = index
     }
@@ -40,7 +40,12 @@ for x = 0;x < 4;x++ {
 for i in 0...6 {
     for j in 0...6
     {
-    print("\(array[i][j]) ")
+        if array[i][j] < 10 {
+            print("0\(array[i][j]) ")
+        } else {
+        print(" \(array[i][j]) ")
     }
-    println("\n")
+    }
+    print("\n")
 }
+
